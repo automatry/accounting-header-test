@@ -1,0 +1,171 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* App layout */
+.app {
+    display: flex;
+    min-height: 100vh; /* Ensures it takes at least the full height of the viewport */
+}
+
+/* Styling the header */
+header {
+    background-color: #004466;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 200px; /* Ensures header spans the full width */
+}
+
+header input[type="file"] {
+    color: white;
+}
+
+/* Styling the sidebar */
+.sidebar {
+    width: 250px; /* Width of the sidebar */
+    max-width: 300px;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    height: calc(100vh - 40px); /* Adjust height if the header has padding/margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .button {
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.sidebar .input-text {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar .delete-button {
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    background-color: #f28b82;
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.finalize-button {
+    background-color: red;
+    color: white;
+}
+
+.sidebar h2 {
+    margin-top: 20px;
+    color: #333;
+    text-align: center; /* Centered heading */
+}
+
+.header-container {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cost-code {
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #e9ecef;
+    cursor: pointer;
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cost-code:hover,
+.org-cost-code:hover {
+    background-color: #dde;
+}
+
+.cost-code.selected,
+.org-cost-code.selected {
+    background-color: #2db105; /* Blue background for selected code */
+    color: white; /* White text for better visibility */
+    text-align: center;
+}
+
+/* Styling the main content area */
+.main-content {
+    flex-grow: 1; /* Takes the remaining space */
+    padding: 20px;
+    display: flex; /* Ensures flex layout for columns */
+    flex-wrap: wrap; /* Allows wrapping of columns if needed */
+}
+
+.organization-column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc; /* Example styling, adjust as needed */
+    min-width: 200px; /* Minimum width for each column */
+}
+
+.org-cost-code {
+    cursor: pointer;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+  }
+  
+
+/* Additional styling */
+button:disabled {
+    background-color: #ccc;
+}
+
+button:not(:disabled):hover {
+    background-color: #0056b3;
+}
+
+.delete-button:not(:disabled):hover {
+    background-color: #e57373;
+}

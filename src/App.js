@@ -80,6 +80,7 @@ function App() {
       reader.readAsArrayBuffer(file);
     });
     setFiles(uploadedFiles);
+    console.log(files); // print command to stop linter errors
   };
 
   const handleSelectHeader = header => {
